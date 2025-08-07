@@ -1,0 +1,33 @@
+{
+  "name": "aethelred",
+  "version": "1.0.0",
+  "description": "Aethelred Protocol: A sovereign, autonomous financial agent for decentralized asset management.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Esrbwt1/Aethelred.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Esrbwt1/Aethelred/issues"
+  },
+  "homepage": "https://github.com/Esrbwt1/Aethelred#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "ethers": "^6.15.0",
+    "hardhat": "^2.26.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "dotenv": "^17.2.1"
+  }
+}

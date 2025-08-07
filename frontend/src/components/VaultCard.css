@@ -1,0 +1,56 @@
+.vault-card {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 450px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.vault-title { margin-top: 0; color: #87CEEB; }
+.vault-address, .vault-balance { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.vault-address a { color: #87CEEB; text-decoration: none; font-family: monospace; }
+.balance-value { font-size: 1.5rem; font-weight: bold; }
+
+.vault-actions { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr;
+  gap: 10px; 
+  margin-top: 20px; 
+  border-top: 1px solid #333;
+  padding-top: 20px;
+}
+
+.action-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.amount-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 16px;
+  box-sizing: border-box; /* Important for padding to work correctly */
+}
+
+.vault-button { 
+  width: 100%;
+  padding: 10px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+}
+.deposit { background-color: #28a745; }
+.withdraw { background-color: #dc3545; }
+.vault-button:disabled { background-color: #555; cursor: not-allowed; opacity: 0.6; }
+.operator-status { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; padding: 10px; background-color: #2a2a2a; border-radius: 5px; }
+.operator-address { font-family: monospace; }
+.operator-button { margin-bottom: 20px; background-color: #ff8c00; }

@@ -1,0 +1,131 @@
+/* Defines the animation itself using our new CSS variables */
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 20px var(--orb-color-1), 0 0 40px var(--orb-color-2), inset 0 0 20px #ffffff44;
+  }
+  50% {
+    transform: scale(1);
+    box-shadow: 0 0 30px var(--orb-color-1), 0 0 60px var(--orb-color-2), inset 0 0 20px #ffffff55;
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 20px var(--orb-color-1), 0 0 40px var(--orb-color-2), inset 0 0 20px #ffffff44;
+  }
+}
+
+.orb-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.orb {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  /* The background is now powered by our variables */
+  background: radial-gradient(circle at 50% 50%, var(--orb-color-1), var(--orb-color-2));
+  position: relative;
+  animation: pulse 5s ease-in-out infinite;
+}
+
+.orb-label {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #cccccc;
+  font-weight: 300;
+}
+
+/* ... The rest of the CSS remains the same ... */
+
+.orb-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.tier2-container {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.tier2-title {
+  margin-top: 0;
+  font-weight: 500;
+  /* The title also uses the dynamic color */
+  color: var(--orb-color-1);
+}
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.rule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #282c34;
+  border-radius: 5px;
+}
+
+.rule-label {
+  font-weight: 300;
+  color: #cccccc;
+}
+
+.rule-value {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.update-section { margin-top: 20px; border-top: 1px solid #2a2a2a; padding-top: 20px; }
+.slider-container { display: flex; align-items: center; gap: 15px; margin: 10px 0; }
+#risk-slider { flex-grow: 1; }
+.update-button { width: 100%; padding: 10px; font-size: 16px; cursor: pointer; background-color: #ff8c00; color: white; border: none; border-radius: 5px; margin-top: 10px; }
+.update-button:disabled { background-color: #555; cursor: not-allowed; }
+
+.rules-section, .whitelist-section {
+  margin-bottom: 20px;
+}
+
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.status-active {
+  background-color: #28a745;
+  color: white;
+}
+
+.status-inactive {
+  background-color: #dc3545;
+  color: white;
+}

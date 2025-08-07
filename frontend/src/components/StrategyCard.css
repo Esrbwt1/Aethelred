@@ -1,0 +1,60 @@
+.strategy-card {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #282c34;
+  border: 1px solid #444;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 450px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.strategy-title {
+  margin-top: 0;
+  color: #ff8c00; /* Alpha Agent's color */
+  font-weight: 500;
+}
+
+.strategy-description {
+  color: #cccccc;
+  min-height: 40px; /* Give space for the text */
+}
+
+.strategy-details {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #1a1a1a;
+  border-radius: 5px;
+}
+
+.detail-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #aaaaaa;
+}
+
+.detail-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.execute-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.execute-button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
